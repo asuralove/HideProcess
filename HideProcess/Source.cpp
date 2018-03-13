@@ -19,11 +19,15 @@ VOID main(
 	INOUT_PARAM     tmp;
 	DWORD           bytesIO;
 
+	int pid;
+	printf("pid=");
+	scanf_s("%d", &pid);
+
 	h = CreateFile(TEXT("\\\\.\\HideProcess"), GENERIC_READ | GENERIC_WRITE,
 		FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
 	if (h != INVALID_HANDLE_VALUE) {
 
-		tmp.pid = 14140;
+		tmp.pid = pid;
 		tmp.Param1 = 0xAAAAAAAA;
 		tmp.Param2 = 0xBBBBBBBB;
 		tmp.Param3 = 0xCCCCCCCC;
