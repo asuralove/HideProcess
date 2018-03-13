@@ -52,8 +52,4 @@ DRIVER_INITIALIZE DriverEntry;
 
 typedef struct _INOUT_PARAM {
 	int pid;
-	ULONG Param1;
-	ULONG Param2;
-	ULONG Param3;
-	ULONG Param4;
 } INOUT_PARAM, *PINOUTPARAM;
